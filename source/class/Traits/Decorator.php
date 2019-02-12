@@ -13,6 +13,11 @@ trait Decorator
     public function decorate($object)
     {
         $this->decoratedObject = $object;
+
+        foreach ($this->decoratedObject as $attribute => &$value) {
+            $this->$attribute = &$value;
+        }
+
     }
 
     public function getDecoratedObject()

@@ -5,9 +5,13 @@ namespace Planck\Pattern\Traits;
 
 
 use Planck\Exception;
+use Planck\Model\Entity;
 
 trait Decorator
 {
+    /**
+     * @var Entity
+     */
     private $decoratedObject;
 
     public function decorate($object)
